@@ -1,3 +1,7 @@
+/** The abstraction for a deck of cards.
+ *  Supports shuffling and the drawing of cards.
+ */
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,6 +15,7 @@ public class Deck {
         Shuffle();
     }
     
+    /** The deck gets cleared and reset, then shuffled. */
     public void Shuffle() {
         deck.clear();
         for (int i = 1; i <= 13; i++) {
@@ -22,6 +27,7 @@ public class Deck {
         Collections.shuffle(deck);
     }
     
+    /** Draw a card. If the deck is empty, throw an exception. */
     public Card GetNextCard() throws IllegalStateException {
         if (deck.size() == 0) {
             throw new IllegalStateException("The deck is empty.");

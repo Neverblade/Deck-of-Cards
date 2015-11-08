@@ -1,3 +1,7 @@
+/** The abstraction for Cards.
+ *  Each one consists of an integer value and enum suit.
+ */
+
 import java.util.HashMap;
 
 public class Card {
@@ -5,6 +9,7 @@ public class Card {
     private int value;
     private Suit suit;
     
+    /** Replaces cards that have names with their corresponding name. */
     private static HashMap<Integer, String> valueConversions;
     static {
         valueConversions = new HashMap<Integer, String>();
